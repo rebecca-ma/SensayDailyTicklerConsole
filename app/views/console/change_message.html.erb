@@ -1,0 +1,17 @@
+<h1>Set Message</h1>
+
+<%= form_for :tickler, url: change_path(@date) do |f| %>
+  <p>
+    <%= f.label 'Date' %><br>
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label 'Message' %><br>
+    <%= f.text_field :message %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>
+
+<p><%= link_to 'Cancel', console_path %></p>

@@ -1,0 +1,30 @@
+<div id='header'>
+  <h1>Daily Tickler Console</h1>
+</div>
+
+<p id='change_link'><%= link_to 'Add/Change a Message', change_path(Date.today.to_s) %></p>
+
+<div id='msg_table'>
+  <table>
+    <tr>
+      <th class='delete'> </th>
+      <th class='through'> </th>
+      <th class='date'>Date</th>
+      <th>Message</th>
+    <tr>
+    <% @data.sort.each do |date, msg| %>
+      <tr>
+        <td class='delete'><%= link_to 'Delete',
+                        delete_path(date),
+                        method: :delete,
+                        data: { confirm: "Delete this message?" }%></td>
+        <td class='through'><%= link_to 'Delete through',
+                        delete_range_path(date),
+                        method: :delete,
+                        data: { confirm: "All messages through this date will be deleted. Are you sure?" }%></td>
+        <td class='date'><%= date %></td>
+        <td><%= msg %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

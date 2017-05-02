@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+#change_link {
+    text-align: center;
+}
+
+#header {
+    width: 100vw;
+    height: 80px;
+    background-color: #9dc7dd;
+    margin: 0;
+    padding: 0;
+    font-family: verdana;
+    border-style: none none double none;
+    border-color: black;
+    border-size: 2px;
+}
+
+#header h1 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    margin: 0;
+}
+
+#msg_table {
+    width: 80vw;
+    height: 75vh;
+    margin: 0px 10vw;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    overflow: auto;
+}
+
+#msg_table table {
+    width: inherit;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#msg_table td {
+    word-wrap: break-word;
+}
+
+#msg_table th, td {
+    border-bottom: solid #ddd 1px;
+}
+
+#msg_table table, th, td {
+    padding: 8px;
+}
+
+.delete {
+    width: 58px;
+}
+
+.through {
+    width: 112px;
+}
+
+.date {
+    width: 91px;
+}
